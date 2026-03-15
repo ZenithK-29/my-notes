@@ -11,7 +11,7 @@ type ResMssgContent = {
   sessinfo: string
 }
 
-type NotesClient = {
+export type NotesClient = {
   _id: string,
   title: string,
   description: string
@@ -215,7 +215,10 @@ export default function Home() {
 
         </div>
 
+
       </div>
+
+      
 
 
     </div>
