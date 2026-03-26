@@ -19,7 +19,7 @@ export async function connectToDb(){
 
     if(!cached.promise){
         const opts = {
-            bufferCommands: true,
+            bufferCommands: false,
             maxPoolSize: 10
         }
 
@@ -34,6 +34,7 @@ export async function connectToDb(){
         cached.connection = await cached.promise
     } catch (error) {
         console.log("Cannot connect to MongoDB")
+        throw error
     }
 
     return cached.connection
